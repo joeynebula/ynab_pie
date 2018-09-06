@@ -1,4 +1,4 @@
-# swagger_client.MonthsApi
+# ynab_pie.MonthsApi
 
 All URIs are relative to *https://api.youneedabudget.com/v1*
 
@@ -19,18 +19,18 @@ Returns a single budget month
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import ynab_pie
+from ynab_pie.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: bearer
-configuration = swagger_client.Configuration()
+configuration = ynab_pie.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.MonthsApi(swagger_client.ApiClient(configuration))
+api_instance = ynab_pie.MonthsApi(ynab_pie.ApiClient(configuration))
 budget_id = 'budget_id_example' # str | The ID of the Budget.  \"last-used\" can also be used to specify the last used budget.
 month = '2013-10-20' # date | The Budget Month in ISO format (e.g. 2016-12-01).    \"current\" can also be used to specify the current calendar month (UTC).
 
@@ -75,18 +75,18 @@ Returns all budget months
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import ynab_pie
+from ynab_pie.rest import ApiException
 from pprint import pprint
 
 # Configure API key authorization: bearer
-configuration = swagger_client.Configuration()
+configuration = ynab_pie.Configuration()
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.MonthsApi(swagger_client.ApiClient(configuration))
+api_instance = ynab_pie.MonthsApi(ynab_pie.ApiClient(configuration))
 budget_id = 'budget_id_example' # str | The ID of the Budget.  \"last-used\" can also be used to specify the last used budget.
 
 try:
