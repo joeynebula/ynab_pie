@@ -38,8 +38,8 @@ class UserApi(object):
 
         Returns authenticated user information.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_user(async=True)
+        asynchronous HTTP request, please pass async_=True
+        >>> thread = api.get_user(async_=True)
         >>> result = thread.get()
 
         :param async bool
@@ -59,8 +59,8 @@ class UserApi(object):
 
         Returns authenticated user information.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_user_with_http_info(async=True)
+        asynchronous HTTP request, please pass async_=True
+        >>> thread = api.get_user_with_http_info(async_=True)
         >>> result = thread.get()
 
         :param async bool
@@ -114,7 +114,7 @@ class UserApi(object):
             files=local_var_files,
             response_type='UserResponse',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_=params.get('async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),

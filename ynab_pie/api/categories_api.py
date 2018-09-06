@@ -38,8 +38,8 @@ class CategoriesApi(object):
 
         Returns all categories grouped by category group.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_categories(budget_id, async=True)
+        asynchronous HTTP request, please pass async_=True
+        >>> thread = api.get_categories(budget_id, async_=True)
         >>> result = thread.get()
 
         :param async bool
@@ -60,8 +60,8 @@ class CategoriesApi(object):
 
         Returns all categories grouped by category group.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_categories_with_http_info(budget_id, async=True)
+        asynchronous HTTP request, please pass async_=True
+        >>> thread = api.get_categories_with_http_info(budget_id, async_=True)
         >>> result = thread.get()
 
         :param async bool
@@ -122,7 +122,7 @@ class CategoriesApi(object):
             files=local_var_files,
             response_type='CategoriesResponse',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_=params.get('async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -133,8 +133,8 @@ class CategoriesApi(object):
 
         Returns a single category  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_category_by_id(budget_id, category_id, async=True)
+        asynchronous HTTP request, please pass async_=True
+        >>> thread = api.get_category_by_id(budget_id, category_id, async_=True)
         >>> result = thread.get()
 
         :param async bool
@@ -156,8 +156,8 @@ class CategoriesApi(object):
 
         Returns a single category  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_category_by_id_with_http_info(budget_id, category_id, async=True)
+        asynchronous HTTP request, please pass async_=True
+        >>> thread = api.get_category_by_id_with_http_info(budget_id, category_id, async_=True)
         >>> result = thread.get()
 
         :param async bool
@@ -225,7 +225,7 @@ class CategoriesApi(object):
             files=local_var_files,
             response_type='CategoryResponse',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_=params.get('async'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
