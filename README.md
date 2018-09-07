@@ -23,7 +23,7 @@ pip install git+https://github.com/joeynebula/ynab_pie.git
 
 Then import the package:
 ```python
-import ynab_pie 
+import ynab_pie
 ```
 
 ### Setuptools
@@ -51,21 +51,27 @@ import ynab_pie
 from ynab_pie.rest import ApiException
 from pprint import pprint
 
+config = ynab_pie.Configuration()
+
 # Configure API key authorization: bearer
-ynab_pie.configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+config.api_key['Authorization'] = '<my auth key>'
+config.api_key_prefix['Authorization'] = 'Bearer'
+
+
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# ynab_pie.configuration.api_key_prefix['Authorization'] = 'Bearer'
+# ynab.configuration.api_key_prefix['Authorization'] = 'Bearer'
 # create an instance of the API class
-api_instance = ynab_pie.AccountsApi()
-budget_id = 'budget_id_example' # str | The ID of the Budget.  \"last-used\" can also be used to specify the last used budget.
-account_id = 'account_id_example' # str | The ID of the Account.
+
+api_client = ynab_pie.ApiClient(config)
+api_budget = ynab_pie.BudgetsApi(api_client)
 
 try:
-    # Single account
-    api_response = api_instance.get_account_by_id(budget_id, account_id)
+    # Get all budgets
+    api_response = api_budget.get_budgets()
+
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AccountsApi->get_account_by_id: %s\n" % e)
+    print("Exception when calling BudgetsApi->get_budgets: %s\n" % e)
 
 ```
 
@@ -184,6 +190,3 @@ Class | Method | HTTP request | Description
 
 
 ## Author
-
-
-
